@@ -1,0 +1,45 @@
+<template>
+    <div class="slds-page-header slds-text-heading_small slds-var-p-around_x-small">{label.CustomSettingRecords}</div>
+
+    <c-generic-alert
+        if:true={alert}
+        variant={alert.variant}
+        message={alert.message}
+        title={alert.title}
+        class="slds-align_absolute-center slds-m-vertical_medium"
+    >
+    </c-generic-alert>
+
+    <div class="slds-grid slds-wrap slds-m-vertical_medium">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+            <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">{label.CustomSettingHeader}</span>
+                <div class="slds-form-element__control">
+                    <div class="slds-form-element__static">{selectedCustomSetting}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <c-datatable-container has-body has-footer={hasFooter}>
+        <span slot="title" class="slds-m-top_medium">
+            <lightning-icon
+                icon-name={iconName}
+                alternative-text={iconName}
+                title={selectedCustomSetting}
+                size="medium"
+                class="slds-m-right_x-small"
+            ></lightning-icon>
+            {selectedCustomSetting} ({allRecords.length})
+        </span>
+
+        <span slot="datatable">
+            <div if:true={isDataAvailable} class="slds-scrollable">
+                <lightning-datatable key-field="Id" data={selectedRecords} columns={columns} hide-checkbox-column> </lightning-datatable>
+            </div>
+            <div if:false={isDataAvailable} class="slds-m-around_small">{label.NoCustomSettingRecords}</div>
+        </span>
+
+        <a if:true={hasFooter} slot="footer" class="slds-align_absolute-center" href="#" onclick={handleClick} data-id={footerLabel}>{footerLabel}</a>
+    </c-datatable-container>
+</template>

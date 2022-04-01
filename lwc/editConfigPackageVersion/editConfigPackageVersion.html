@@ -1,0 +1,20 @@
+<template>
+    <lightning-quick-action-panel header="Package Version Configuration">
+        <lightning-record-view-form object-api-name={objectApiName} record-id={recordId}>
+            <lightning-messages></lightning-messages>
+
+            <lightning-layout multiple-rows>
+                <template for:each={layout} for:item="item">
+                    <lightning-layout-item padding="around-small" size={item.size} key={item.name}>
+                        <lightning-output-field if:true={item.output} field-name={item.name}> </lightning-output-field>
+                        <div if:true={item.header} class="slds-text-heading_medium">{item.name}</div>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </lightning-record-view-form>
+
+        <div slot="footer">
+            <lightning-button label="Cancel" onclick={closeModal}></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

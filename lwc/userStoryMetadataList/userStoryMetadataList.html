@@ -1,0 +1,53 @@
+<template>
+    <lightning-spinner if:true={showSpinner} variant="brand"></lightning-spinner>
+    <lightning-layout multiple-rows class="flex-end height100">
+        <lightning-layout-item size="12" class="align-start">
+            <span if:true={isFileCreated}>
+                <legend class="slds-form-element__legend slds-form-element__label">{label.RetrieveSpecific}</legend>
+                <lightning-helptext content={label.RetrieveMetadataHelpText}></lightning-helptext>
+            </span>
+        </lightning-layout-item>
+        <lightning-layout-item size="12">
+            <lightning-layout>
+                <lightning-layout-item flexibility="auto" class="slds-m-bottom_xx-small flex-end" if:true={isFileCreated}>
+                    <c-lookup
+                        class="flex-grow max-width-300"
+                        variant="label-stacked"
+                        label={label.Type}
+                        placeholder={label.SelectType}
+                        onsearch={handleSearchMetadataType}
+                        onselectionchange={handleChangeMetadataType}
+                        scroll-after-n-items="10"
+                    >
+                    </c-lookup>
+                    <lightning-input
+                        class="slds-var-m-left_x-small slds-m-bottom_none slds-p-around_none flex-grow max-width-300"
+                        type="text"
+                        name="searchText"
+                        data-field="searchText"
+                        value={searchText}
+                        label={label.Name}
+                        placeholder={label.SearchByNameRetrieveChanges}
+                        variant="label-stacked"
+                        required={isSeachTextRequired}
+                        onchange={handleInputChange}
+                    ></lightning-input>
+                    <lightning-button
+                        class="slds-var-m-left_x-small"
+                        title={label.ListMetadata}
+                        label={label.ListMetadata}
+                        onclick={handleMetadataSearch}
+                    ></lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item size="6" class="slds-m-bottom_xx-small flex-end" if:false={isFileCreated}>
+                    <button
+                        class="slds-button slds-button_neutral slds-align_absolute-center slds-button_stretch"
+                        onclick={handleMetadataListing}
+                    >
+                        {label.GetMetadataList}
+                    </button>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

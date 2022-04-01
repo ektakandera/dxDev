@@ -1,0 +1,78 @@
+<template>
+    <div class="slds-page-header slds-text-heading_small slds-var-p-around_x-small">{label.CustomSettingRecords}</div>
+    <lightning-spinner if:true={showSpinner} variant="brand" size="medium"> </lightning-spinner>
+
+    <c-generic-alert
+        if:true={alert}
+        variant={alert.variant}
+        message={alert.message}
+        title={alert.title}
+        class="slds-align_absolute-center"
+    ></c-generic-alert>
+
+    <lightning-layout multiple-rows="true" if:true={showRetrieveNow}>
+        <lightning-layout-item padding="around-small" size="12" class="slds-align_absolute-center">
+            {noCustomSettings}
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small" size="12" class="slds-align_absolute-center">
+            <lightning-button label="Retrieve Now" title="Retrieve Now" onclick={getCustomSettings}></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <lightning-layout multiple-rows="true" if:true={showPanel}>
+        <lightning-layout-item size="12" padding="around-small">
+            <legend class="slds-form-element__legend slds-form-element__label">{label.RetrieveAndChooseRecords}</legend>
+            <lightning-helptext content={label.RetrieveAndChooseHelptext}></lightning-helptext>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" padding="around-small">
+            <c-lookup
+                class="flex-grow max-width-300"
+                variant="label-stacked"
+                label={label.CustomSettingHeader}
+                placeholder="Select Custom Setting"
+                onsearch={handleSearchCustomSetting}
+                onselectionchange={handleChangeCustomSetting}
+                scroll-after-n-items="10"
+            >
+            </c-lookup>
+        </lightning-layout-item>
+        <lightning-layout-item size="3" padding="around-small" class="slds-m-top_large">
+            <lightning-button
+                label="Retrieve new Custom Setting"
+                title="Retrieve new Custom Setting"
+                onclick={getCustomSettings}
+            ></lightning-button>
+        </lightning-layout-item>
+    </lightning-layout>
+
+    <c-datatable-container
+        has-body="true"
+        enable-default-search="true"
+        minimum-search-term-length="2"
+        title={selectedCustomSetting}
+        class="slds-p-around_small"
+        onsearch={handleRecordSearch}
+        onclearsearch={handleClearSearch}
+        if:true={selectedCustomSetting}
+    >
+        <span slot="title" class="slds-m-top_medium">{selectedCustomSetting} {label.Records}</span>
+        <span slot="titleInfo">{selectedId.length} {itemDetails}</span>
+        <lightning-button slot="actions" label="Fetch all records" title="Fetch all records" onclick={getRecords}> </lightning-button>
+
+        <span slot="datatable" class="slds-align_absolute-center">
+            <div class="slds-scrollable table-height" if:false={message}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={records}
+                    columns={columns}
+                    onrowselection={onRowSelection}
+                    onsort={handleSort}
+                    sorted-direction={sortDirection}
+                    sorted-by={sortedBy}
+                    selected-rows={selectedId}
+                ></lightning-datatable>
+            </div>
+            <div if:true={message} class="slds-p-around_small">{message}</div>
+        </span>
+    </c-datatable-container>
+</template>

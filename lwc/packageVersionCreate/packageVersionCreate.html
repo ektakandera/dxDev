@@ -1,0 +1,22 @@
+<template>
+    <lightning-quick-action-panel header="Create Package Version">
+        <lightning-layout multiple-rows="true">
+            <template for:each={parameters} for:item="param">
+                <lightning-layout-item padding="around-small" size="6" key={param.name}>
+                    <lightning-input
+                        type={param.type}
+                        label={param.label}
+                        name={param.name}
+                        field-level-help={param.help}
+                        value={param.value}
+                    ></lightning-input>
+                </lightning-layout-item>
+            </template>
+        </lightning-layout>
+
+        <div slot="footer">
+            <lightning-button class="slds-m-right_medium" label="Cancel" onclick={closeModal}> </lightning-button>
+            <lightning-button variant="brand" label="Create Version" onclick={create}> </lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

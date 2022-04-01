@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>52.0</apiVersion>
+    <masterLabel>Confirm User Story for Package Distribution</masterLabel>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property label="Existing User Story Id" name="existingUserStoryId" type="String" />
+            <property label="New Serialized User Story" name="newSerializedUserStory" type="String" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

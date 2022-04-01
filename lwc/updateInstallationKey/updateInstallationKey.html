@@ -1,0 +1,27 @@
+<template>
+    <header class="slds-modal__header slds-modal__title">Update Installation Key</header>
+    <div class="slds-modal__content slds-p-around_medium">
+        <lightning-input
+            if:true={installationKey}
+            label="Installation Key"
+            value={installationKey}
+            type={type}
+            required
+            readonly
+        ></lightning-input>
+        <c-generic-alert
+            if:true={alert}
+            variant={alert.variant}
+            message={alert.message}
+            title={alert.title}
+            class="slds-align_absolute-center"
+        ></c-generic-alert>
+    </div>
+    <footer class="slds-modal__footer">
+        <lightning-button label="Cancel" onclick={handleCancel} class="slds-m-right_small"></lightning-button>
+        <template if:true={editAccess}>
+            <lightning-button label="Edit" onclick={handleEdit} variant="brand" if:true={readonly}></lightning-button>
+            <lightning-button label="Save" onclick={handleSave} variant="brand" if:false={readonly}></lightning-button>
+        </template>
+    </footer>
+</template>

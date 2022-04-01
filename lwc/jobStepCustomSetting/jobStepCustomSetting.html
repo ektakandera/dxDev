@@ -1,0 +1,20 @@
+<template>
+    <c-create-job-step-custom-setting
+        if:true={isCreateMode}
+        data-id="customSettingJobStep"
+        label={label}
+        columns={columns}
+    ></c-create-job-step-custom-setting>
+    <c-edit-job-step-custom-setting
+        if:true={isEditMode}
+        config-json={configJson}
+        data-id="customSettingJobStep"
+        label={label}
+        columns={columns}
+    ></c-edit-job-step-custom-setting>
+    <c-view-job-step-custom-setting 
+        if:true={isViewMode} 
+        config-json={configJson} 
+        label={label}
+    ></c-view-job-step-custom-setting>
+</template>

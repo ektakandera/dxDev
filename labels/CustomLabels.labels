@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AddApexTests</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AddApexTests</shortDescription>
+        <value>Add Apex Tests</value>
+    </labels>
+    <labels>
+        <fullName>AddUserStory</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>AddUserStory</shortDescription>
+        <value>Add to User Story</value>
+    </labels>
+    <labels>
+        <fullName>ApexTestClasses</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ApexTestClasses</shortDescription>
+        <value>Apex Test Classes</value>
+    </labels>
+    <labels>
+        <fullName>BulkPackageImportNotSupported</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Bulk Package Import Not Supported</shortDescription>
+        <value>Only one package can be imported at a time.</value>
+    </labels>
+    <labels>
+        <fullName>CLOSE</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>CLOSE</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>Cancel</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>ClearAllFilters</fullName>
+        <categories>Sprint Wall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ClearAllFilters</shortDescription>
+        <value>Clear All Filters</value>
+    </labels>
+    <labels>
+        <fullName>CustomSettingRecords</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Setting Records</shortDescription>
+        <value>Custom Setting Records</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Setting_Header</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Setting Header</shortDescription>
+        <value>Custom Setting (Source Org)</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Setting_Min_Records_Criteria</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Setting Min Records Criteria</shortDescription>
+        <value>Kindly choose an appropriate custom setting and at least one of its record</value>
+    </labels>
+    <labels>
+        <fullName>Custom_Setting_Records_Env_Name</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Custom Setting Records Env Name</shortDescription>
+        <value>Custom Setting Records in {0}</value>
+    </labels>
+    <labels>
+        <fullName>FetchAllRecords</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Fetch All Records</shortDescription>
+        <value>No items to display yet. Click &apos;Fetch all records&apos;</value>
+    </labels>
+    <labels>
+        <fullName>Filter</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter</shortDescription>
+        <value>Filter</value>
+    </labels>
+    <labels>
+        <fullName>FilterOptionsSelected</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>FilterOptionsSelected</shortDescription>
+        <value>{0} options selected</value>
+    </labels>
+    <labels>
+        <fullName>FromFilterRange</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>From Filter Range</shortDescription>
+        <value>From</value>
+    </labels>
+    <labels>
+        <fullName>From_Filter_Range</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>From Filter Range</shortDescription>
+        <value>From</value>
+    </labels>
+    <labels>
+        <fullName>GetMetadataList</fullName>
+        <categories>User Story List Metadata</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>GetMetadataList</shortDescription>
+        <value>Get Metadata List</value>
+    </labels>
+    <labels>
+        <fullName>InvalidPipeline</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invalid Pipeline</shortDescription>
+        <value>Invalid Pipeline Record Id. Please check your pipeline input parameter.</value>
+    </labels>
+    <labels>
+        <fullName>Invalid_Relationship_Error</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Invalid Relationship Error</shortDescription>
+        <value>Relationship field for query was not provided and no default relationship field has been found</value>
+    </labels>
+    <labels>
+        <fullName>Item_Selected</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Item Selected</shortDescription>
+        <value>item selected</value>
+    </labels>
+    <labels>
+        <fullName>Items_Selected</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Items Selected</shortDescription>
+        <value>items selected</value>
+    </labels>
+    <labels>
+        <fullName>ListMetadata</fullName>
+        <categories>User Story List Metadata</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ListMetadata</shortDescription>
+        <value>List Metadata</value>
+    </labels>
+    <labels>
+        <fullName>ListSobjectsErrorMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>ListSobjectsErrorMessage</shortDescription>
+        <value>Error listing sobjects</value>
+    </labels>
+    <labels>
+        <fullName>Loading</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Loading</shortDescription>
+        <value>Loading</value>
+    </labels>
+    <labels>
+        <fullName>MaxFilterRange</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Max Filter Range</shortDescription>
+        <value>Max</value>
+    </labels>
+    <labels>
+        <fullName>MinFilterRange</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Min Filter Range</shortDescription>
+        <value>Min</value>
+    </labels>
+    <labels>
+        <fullName>Name</fullName>
+        <categories>Commit Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>NoCustomSettingRecords</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Custom Setting Records</shortDescription>
+        <value>This custom setting has no records available to display.</value>
+    </labels>
+    <labels>
+        <fullName>NoCustomSettings</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Custom Settings</shortDescription>
+        <value>Looks like there are no CustomSettings yet. Click on Retrieve Now and we will check what is in {0} org.</value>
+    </labels>
+    <labels>
+        <fullName>Package_Creation_Started</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Package Creation Started</shortDescription>
+        <value>This will create an {0} package. Track it&apos;s progress from the next screen.</value>
+    </labels>
+    <labels>
+        <fullName>PullChanges</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PullChanges</shortDescription>
+        <value>Pull Changes</value>
+    </labels>
+    <labels>
+        <fullName>PullChangesDateMandatoryWarning</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PullChangesDateMandatoryWarning</shortDescription>
+        <value>Since this is the first commit of this User Story, please specify a Date or Date/Time to use Pull Changes</value>
+    </labels>
+    <labels>
+        <fullName>PullChangesFrom</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PullChangesFrom</shortDescription>
+        <value>Pull Changes by Date</value>
+    </labels>
+    <labels>
+        <fullName>PullChangesFromHelpText</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PullChangesFromHelpText</shortDescription>
+        <value>Pull changes from the source org based on the specified date/time. If the date/time is empty, the last User Story Commit date will be used. Otherwise, the Start Date of the Sprint set in the User Story will be used</value>
+    </labels>
+    <labels>
+        <fullName>QuickFilters</fullName>
+        <categories>Sprint Wall</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>QuickFilters</shortDescription>
+        <value>Quick Filters</value>
+    </labels>
+    <labels>
+        <fullName>Records</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Records</shortDescription>
+        <value>records</value>
+    </labels>
+    <labels>
+        <fullName>Records_Updated_Successfully</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Records_Updated_Successfully</shortDescription>
+        <value>Records updated successfully</value>
+    </labels>
+    <labels>
+        <fullName>RetrieveAndChooseHelptext</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Retrieve And Choose Helptext</shortDescription>
+        <value>If you don&apos;t see the Custom Setting you want, click on Fetch all records to load every Custom Setting record in the Source Org available to deploy.</value>
+    </labels>
+    <labels>
+        <fullName>RetrieveAndChooseRecords</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Retrieve and choose records</shortDescription>
+        <value>Retrieve and choose records</value>
+    </labels>
+    <labels>
+        <fullName>RetrieveMetadata</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RetrieveMetadata</shortDescription>
+        <value>Retrieve Metadata</value>
+    </labels>
+    <labels>
+        <fullName>RetrieveMetadataHelpText</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RetrieveMetadataHelpText</shortDescription>
+        <value>Pull changes from the source org based on the specified type and name. All components matching the type and text entered will be retrieved</value>
+    </labels>
+    <labels>
+        <fullName>RetrieveSpecific</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>RetrieveSpecific</shortDescription>
+        <value>Retrieve Metadata by Type and Name</value>
+    </labels>
+    <labels>
+        <fullName>Save</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Save</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>Script</fullName>
+        <categories>Apex Step</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Script</shortDescription>
+        <value>Script</value>
+    </labels>
+    <labels>
+        <fullName>Search</fullName>
+        <categories>Copado</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>SearchByNameRetrieveChanges</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SearchByNameRetrieveChanges</shortDescription>
+        <value>Type a component name or leave it empty</value>
+    </labels>
+    <labels>
+        <fullName>SelectMetadataWarning</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SelectMetadataWarning</shortDescription>
+        <value>Please select a metadata type from the list</value>
+    </labels>
+    <labels>
+        <fullName>SelectType</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SelectType</shortDescription>
+        <value>Select Type</value>
+    </labels>
+    <labels>
+        <fullName>SourceTrackingNotEnabledMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>SourceTrackingNotEnabledMessage</shortDescription>
+        <value>Source Tracking is not enabled in Source environment. Please use the other metadata search options</value>
+    </labels>
+    <labels>
+        <fullName>ToFilterRange</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To Filter Range</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>To_Filter_Range</fullName>
+        <categories>Datatable Filters</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>To Filter Range</shortDescription>
+        <value>To</value>
+    </labels>
+    <labels>
+        <fullName>Type</fullName>
+        <categories>Commit Page</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>View_All</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All</shortDescription>
+        <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>View_Less</fullName>
+        <categories>Job Step Custom Setting</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Less</shortDescription>
+        <value>View Less</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_crossobject_fieldsets_not_allowed_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a cross-object fieldsset is not allowed and attempted.</shortDescription>
+        <value>Cross-object fields not allowed and field &quot;{0}&quot; is a cross-object field.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_fieldset_wrong_sobject_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error when selecting a field set for a different sobject type.</shortDescription>
+        <value>Field set &quot;{0}&quot; is not for SObject type &quot;{1}&quot;</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_recursive_subquery_error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to nest subqueries.</shortDescription>
+        <value>Invalid call to subselectQuery.  You may not add a subselect query to a subselect query.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_QueryFactory_subquery_invalid_relationship</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Presented when attempting to create a subquery from an invalid relationship.</shortDescription>
+        <value>Invalid call to subselectQuery.  Invalid relationship for table.</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_insertable</shortDescription>
+        <value>You do not have permission to insert field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_readable</shortDescription>
+        <value>You do not have permission to read the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_field_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_field_not_updateable</shortDescription>
+        <value>You do not have permission to update the field {1} on {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_deletable</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_deletable</shortDescription>
+        <value>You do not have permission to delete {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_insertable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_insertable</shortDescription>
+        <value>You do not have permission to insert {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_readable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_readable</shortDescription>
+        <value>You do not have permission to read {0}</value>
+    </labels>
+    <labels>
+        <fullName>fflib_security_error_object_not_updateable</fullName>
+        <categories>security,error</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>fflib_security_error_object_not_updateable</shortDescription>
+        <value>You do not have permission to update {0}</value>
+    </labels>
+</CustomLabels>

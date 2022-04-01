@@ -1,0 +1,14 @@
+<template>
+    <lightning-quick-action-panel header="Publish Package">
+        <div if:false={alert} class="slds-is-relative slds-m-around_large slds-p-around_large">
+            <lightning-spinner size="large" variant="brand" title="Loading"></lightning-spinner>
+        </div>
+        <c-generic-alert
+            if:true={alert}
+            variant={alert.variant}
+            message={alert.message}
+            title={alert.title}
+            class="slds-align_absolute-center"
+        ></c-generic-alert>
+    </lightning-quick-action-panel>
+</template>

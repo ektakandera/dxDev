@@ -1,0 +1,57 @@
+<template>
+    <lightning-spinner if:true={showSpinner} variant="brand" size="medium"> </lightning-spinner>
+
+    <div class="slds-page-header slds-text-heading_small slds-var-p-around_x-small">{customSettingRecordsVerbiage}</div>
+
+    <c-generic-alert if:true={alert} variant={alert.variant} message={alert.message} title={alert.title} class="slds-align_absolute-center slds-m-vertical_medium">
+    </c-generic-alert>
+
+    <div class="slds-grid slds-wrap slds-m-vertical_medium">
+        <div class="slds-col slds-size_1-of-1 slds-large-size_1-of-2">
+            <div class="slds-form-element slds-form-element_readonly">
+                <span class="slds-form-element__label">{label.CustomSettingHeader}</span>
+                <div class="slds-form-element__control">
+                    <div class="slds-form-element__static">{selectedCustomSetting}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <c-datatable-container
+        has-body
+        enable-default-search
+        minimum-search-term-length="2"
+        title={selectedCustomSetting}
+        onsearch={handleRecordSearch}
+        onclearsearch={handleClearSearch}
+    >
+        <span slot="title" class="slds-m-top_medium">
+            <lightning-icon
+                icon-name={iconName}
+                class="slds-m-right_x-small"
+                alternative-text={iconName}
+                title={selectedCustomSetting}
+                size="medium"
+            ></lightning-icon>
+            {selectedCustomSetting} {label.Records}
+        </span>
+        <span slot="titleInfo">{selectedRows.length} {itemDetails}</span>
+
+        <span slot="datatable">
+            <div if:true={isDataAvailable} class="slds-scrollable">
+                <lightning-datatable
+                    key-field="Id"
+                    data={selectedRecords}
+                    columns={columns}
+                    onsort={handleSort}
+                    sorted-direction={sortDirection}
+                    onrowselection={onRowSelection}
+                    sorted-by={sortedBy}
+                    selected-rows={selectedRows}
+                >
+                </lightning-datatable>
+            </div>
+            <div if:false={isDataAvailable} class="slds-m-around_small">{label.NoCustomSettingRecords}</div>
+        </span>
+    </c-datatable-container>
+</template>

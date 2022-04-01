@@ -1,0 +1,45 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <c-custom-highlight-panel title={title_header} variant="related" field-set-name={fieldSetName}>
+            <div slot="actions">
+                    <lightning-button-group>
+                        <lightning-button id="addButton" label={label.ADD_USER_STORY} onclick={attachSelectedRows}></lightning-button>
+                    </lightning-button-group>
+            </div>
+    </c-custom-highlight-panel>
+    <br>
+    <c-datatable-container 
+        icon-name="custom:custom63"
+        has-body="true"
+        enable-default-search="true"
+        rows={allRows}
+        columns={columns}
+        has-footer="true"
+        onsearch={handleApplySearch}
+        onclearsearch={handleClearSearch}
+        >
+        <span slot="title">{title}</span>
+        
+        <span slot="datatable">
+            <div style="height: calc(100vh - 510px)">
+                <template if:true={isLoading}>
+                    <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                    </lightning-spinner>
+               </template>
+               <template if:true={isSearchInProgress}>
+                <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+                </lightning-spinner>
+           </template>
+                <template if:false={isLoading}>
+                    <lightning-datatable 
+                        key-field="n"
+                        data={data}
+                        columns={columns}
+                        selected-rows={preSelectedRows}
+                        onrowselection={handleSelect}>
+                    </lightning-datatable>
+                </template>
+            </div>
+        </span>
+    </c-datatable-container>
+</template>

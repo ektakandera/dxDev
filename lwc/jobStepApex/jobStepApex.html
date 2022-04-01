@@ -1,0 +1,9 @@
+<template>
+    <div class="slds-page-header slds-text-heading_small slds-var-p-around_x-small">{label.SCRIPT}</div>
+    <lightning-layout>
+        <lightning-layout-item padding="around-small" size="12">
+            <lightning-spinner if:true={showSpinner} variant="brand" size="medium"> </lightning-spinner>
+            <div class="container" lwc:dom="manual"></div>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

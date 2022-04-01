@@ -1,0 +1,89 @@
+<template>
+    <lightning-card class="table-actions">
+        <lightning-spinner if:true={showSpinner} variant="brand"></lightning-spinner>
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="horizontal-medium">
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="12">
+                        <legend class="slds-form-element__legend slds-form-element__label">{label.PullChangesFrom}</legend>
+                        <lightning-helptext content={label.PullChangesFromHelpText}></lightning-helptext>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <lightning-layout>
+                            <lightning-layout-item flexibility="auto" class="flex-end">
+                                <lightning-input
+                                    type="datetime"
+                                    name="dateTimeToPull"
+                                    label=""
+                                    value={dateTimeToPull}
+                                    onchange={handleInputChange}
+                                    max={maxDate}
+                                >
+                                </lightning-input>
+                                <div class="slds-m-bottom_xx-small">
+                                    <lightning-button
+                                        class="slds-var-m-left_x-small"
+                                        title={label.PullChanges}
+                                        label={label.PullChanges}
+                                        onclick={pullChanges}
+                                        disabled={disablePullChanges}
+                                    ></lightning-button>
+                                    <lightning-helptext
+                                        if:true={enablePullChangesHelpText}
+                                        class="slds-var-m-left_x-small"
+                                        content={label.SourceTrackingNotEnabledMessage}
+                                    ></lightning-helptext>
+                                </div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="horizontal-medium">
+                <lightning-layout multiple-rows class="flex-end height100" if:false={isMetadataListPermissionEnabled}>
+                    <lightning-layout-item size="12" class="align-start">
+                        <legend class="slds-form-element__legend slds-form-element__label">{label.RetrieveSpecific}</legend>
+                        <lightning-helptext content={label.RetrieveMetadataHelpText}></lightning-helptext>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12">
+                        <lightning-layout>
+                            <lightning-layout-item flexibility="auto" class="slds-m-bottom_xx-small flex-end">
+                                <c-lookup
+                                    class="flex-grow max-width-300"
+                                    variant="label-stacked"
+                                    label={label.Type}
+                                    placeholder={label.SelectType}
+                                    onsearch={handleSearchMetadataType}
+                                    onselectionchange={handleChangeMetadataType}
+                                    scroll-after-n-items="10"
+                                >
+                                </c-lookup>
+                                <lightning-input
+                                    class="validValue slds-var-m-left_x-small slds-m-bottom_none slds-p-around_none flex-grow max-width-300"
+                                    type="text"
+                                    name="searchText"
+                                    data-field="searchText"
+                                    value={searchText}
+                                    label={label.Name}
+                                    placeholder={label.SearchByNameRetrieveChanges}
+                                    variant="label-stacked"
+                                    required={isSeachTextRequired}
+                                    onchange={handleInputChange}
+                                ></lightning-input>
+                                <lightning-button
+                                    class="slds-var-m-left_x-small"
+                                    title={label.RetrieveMetadata}
+                                    label={label.RetrieveMetadata}
+                                    onclick={retrieveChanges}
+                                    disabled={disableRetrieveMetadata}
+                                ></lightning-button>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                    </lightning-layout-item>
+                </lightning-layout>
+                <c-user-story-metadata-list credential-id={credentialId} if:true={isMetadataListPermissionEnabled}>
+                </c-user-story-metadata-list>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

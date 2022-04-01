@@ -1,0 +1,21 @@
+<template>
+    <lightning-spinner if:true={isLoading} variant="brand"></lightning-spinner>
+
+    <div if:false={isLoading} class="body" style="height: 500px">
+        <lightning-datatable
+            key-field={keyField}
+            data={data}
+            columns={columns}
+            onrowselection={handleRowSelection}
+            max-row-selection={maxRowSelection}
+            sorted-direction={sortDirection}
+            sorted-by={sortedBy}
+            onsort={onHandleSort}
+            hide-checkbox-column={hideCheckboxColumn}
+            enable-infinite-loading
+            onloadmore={handleLoadMore}
+            column-widths-mode="auto"
+        >
+        </lightning-datatable>
+    </div>
+</template>

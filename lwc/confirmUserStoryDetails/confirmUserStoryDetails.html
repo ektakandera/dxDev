@@ -1,0 +1,49 @@
+<template>
+    <lightning-layout if:true={result} class="slds-m-left_x-large" multiple-rows>
+        <ul class="slds-has-block-links_space slds-list_dotted">
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">Pipeline: {result.pipelineName}</span>
+                </lightning-layout-item>
+            </li>
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">Current Story Environment: {result.currentEnvironment}</span>
+                </lightning-layout-item>
+            </li>
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">Next Environment: {result.nextEnvironment}</span>
+                </lightning-layout-item>
+            </li>
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">User Story Number: {result.userStoryNumber}</span>
+                </lightning-layout-item>
+            </li>
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">User Story Title: {result.userStoryTitle}</span>
+                </lightning-layout-item>
+            </li>
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">Project: {result.project}</span>
+                </lightning-layout-item>
+            </li>
+            <li>
+                <lightning-layout-item size="12" padding="around-small">
+                    <span class="slds-text-heading_small">Release: {result.release}</span>
+                </lightning-layout-item>
+            </li>
+        </ul>
+    </lightning-layout>
+
+    <c-generic-alert
+        if:true={error}
+        variant={error.variant}
+        message={error.message}
+        title={error.title}
+        class="slds-align_absolute-center"
+    ></c-generic-alert>
+</template>
